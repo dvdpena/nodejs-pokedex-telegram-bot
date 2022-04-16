@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-pokedex-telegram-bot",
+  "version": "0.1.0",
+  "description": "Telegram bot that uses a SQL database to return pokemon stats.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "MySQL",
+    "MariaDB",
+    "Telegram"
+  ],
+  "author": "David Peña",
+  "license": "ISC"
+}
