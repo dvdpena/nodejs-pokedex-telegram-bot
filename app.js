@@ -14,7 +14,7 @@ const bot = new controllers.Bot(process.env.POKEDEX_BOT_TOKEN, `${process.env.EN
 bot.setWebhook()
 
 const httpsServer = http.createServer(app);
-httpsServer.listen(process.env.BOT_PORT, function(){
+httpsServer.listen(process.env.BOT_PORT, "::", function(){
     console.log(`Listening on port ${process.env.BOT_PORT}`);
 })
 
