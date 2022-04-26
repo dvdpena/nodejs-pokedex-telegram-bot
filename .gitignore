@@ -150,3 +150,4 @@ dist
 # confidential files
 .mysql_login.json
 .maria_login.json
+images/
