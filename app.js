@@ -10,7 +10,7 @@ const controllers = require("./controllers");
 const models = require('./models');
 const bot_modules = require("./bot_modules");
 
-const bot = new controllers.Bot(process.env.POKEDEX_BOT_TOKEN, `${process.env.ENDPOINT}telegram/pokedex`)
+const bot = new controllers.Bot(process.env.POKEDEX_BOT_TOKEN, `${process.env.ENDPOINT}/pokedex`)
 bot.setWebhook()
 
 const httpsServer = http.createServer(app);
@@ -18,7 +18,12 @@ httpsServer.listen(process.env.BOT_PORT, "::", function(){
     console.log(`Listening on port ${process.env.BOT_PORT}`);
 })
 
-app.post('/telegram/pokedex', function (req, res) {
+app.post('/pokedex', function (req, res) {
     bot_modules.main.entry(bot, req.body);
+    res.send('Ok');
+});
+
+app.get('/', (req, res)=>{
+    res.statusCode = 200;
     res.send('Ok');
 });
