@@ -10,7 +10,7 @@ const controllers = require("./controllers");
 const models = require('./models');
 const bot_modules = require("./bot_modules");
 
-const bot = new controllers.Bot(process.env.POKEDEX_BOT_TOKEN, `${process.env.ENDPOINT}/pokedex`)
+const bot = new controllers.Bot(process.env.POKEDEX_BOT_TOKEN, `${process.env.ENDPOINT}pokedex`)
 bot.setWebhook()
 
 const httpsServer = http.createServer(app);

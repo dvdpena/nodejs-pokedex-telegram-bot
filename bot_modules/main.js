@@ -14,7 +14,8 @@ const IMG_PATH = __dirname.split("/").reduce((total, item)=>{
 })
 
 async function entry(bot, i_message){
-    if (i_message?.message?.text){
+    //if (i_message?.message?.text){ node 14+ syntax 
+    if (i_message.message && i_message.message.text){
         if (i_message.message.text === "/start"){
             message = new Message(i_message.message.chat.id, string_const.start)
             return bot.sendMessage(message);
